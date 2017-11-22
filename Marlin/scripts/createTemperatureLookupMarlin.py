@@ -47,9 +47,9 @@ class Thermistor:
         a = y1 - (b + l1**2 *c)*l1
         
         if c < 0:
-            print "//////////////////////////////////////////////////////////////////////////////////////"
-            print "// WARNING: negative coefficient 'c'! Something may be wrong with the measurements! //"
-            print "//////////////////////////////////////////////////////////////////////////////////////"
+            print ("//////////////////////////////////////////////////////////////////////////////////////")
+            print ("// WARNING: negative coefficient 'c'! Something may be wrong with the measurements! //")
+            print ("//////////////////////////////////////////////////////////////////////////////////////")
             c = -c
         self.c1 = a                         # Steinhart-Hart coefficients
         self.c2 = b
@@ -147,7 +147,7 @@ def main(argv):
                         t.resist( adc), \
                         t.resol(  adc) \
                     )
-    print "};"
+    print ("};")
 
 def usage():
     print __doc__
