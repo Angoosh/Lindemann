@@ -340,10 +340,10 @@ void nope()
 void lcd_version()
 {
     START_MENU();
-    MENU_ITEM(function, SHORT_BUILD_VERSION, nope);
-    MENU_ITEM(function, DETAILED_BUILD_VERSION, nope);
-    MENU_ITEM(function, STRING_DISTRIBUTION_DATE, nope);
-    MENU_ITEM(function, SOURCE_CODE_URL, nope);
+    MENU_ITEM(back, SHORT_BUILD_VERSION, lcd_main_menu);
+    MENU_ITEM(back, DETAILED_BUILD_VERSION, lcd_main_menu);
+    MENU_ITEM(back, STRING_DISTRIBUTION_DATE, lcd_main_menu);
+    MENU_ITEM(back, SOURCE_CODE_URL, lcd_main_menu);
     END_MENU();
 }
 
@@ -635,7 +635,7 @@ static void extrudio()
     menu_action_gcode(PSTR("G92 E0"));
     delay(2); 
     menu_action_gcode(PSTR("G1 E65 F500"));
-    menu_action_gcode(PSTR("G1 E100 F200"));   
+    menu_action_gcode(PSTR("G1 E120 F200"));   
 }
 
 static void retractio()
@@ -692,9 +692,10 @@ static void lcd_prepare_menu()
     MENU_ITEM(submenu, MSG_TEMPERATURE, lcd_control_temperature_menu);
     MENU_ITEM(submenu, MSG_MOVE_AXIS, lcd_move_menu);
     MENU_ITEM(submenu, "Extruder", lcd_ext_menu);
+    MENU_ITEM(function, MSG_COOLDOWN, lcd_cooldown);
     MENU_ITEM(gcode, MSG_AUTO_HOME, PSTR("G28"));
     MENU_ITEM(gcode, MSG_DISABLE_STEPPERS, PSTR("M84"));
-    MENU_ITEM(function, MSG_COOLDOWN, lcd_cooldown);
+    
     //MENU_ITEM(function, MSG_SET_HOME_OFFSETS, lcd_set_home_offsets);
     //MENU_ITEM(gcode, MSG_SET_ORIGIN, PSTR("G92 X0 Y0 Z0"));
 /*#if TEMP_SENSOR_0 != 0

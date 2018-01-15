@@ -4456,6 +4456,8 @@ void manage_inactivity(bool ignore_stepper_queue/*=false*/) //default argument s
   #endif
   check_axes_activity();
 }
+	
+void(* resetFunc) (void) = 0; //declare reset function @ address 0
 
 void kill()
 {
@@ -4484,7 +4486,8 @@ void kill()
   }
   cli();   // disable interrupts
   suicide();
-  while(1) { /* Intentionally left empty */ } // Wait for reset
+  resetFunc();
+  //while(1) { /* Intentionally left empty */ } // Wait for reset
 }
 
 void Stop()
