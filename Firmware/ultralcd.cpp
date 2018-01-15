@@ -340,10 +340,10 @@ void nope()
 void lcd_version()
 {
     START_MENU();
-    MENU_ITEM(function, SHORT_BUILD_VERSION, lcd_main_menu);
-    MENU_ITEM(function, DETAILED_BUILD_VERSION, lcd_main_menu);
-    MENU_ITEM(function, STRING_DISTRIBUTION_DATE, lcd_main_menu);
-    MENU_ITEM(function, SOURCE_CODE_URL, lcd_main_menu);
+    MENU_ITEM(back, SHORT_BUILD_VERSION, lcd_main_menu);
+    MENU_ITEM(back, DETAILED_BUILD_VERSION, lcd_main_menu);
+    MENU_ITEM(back, STRING_DISTRIBUTION_DATE, lcd_main_menu);
+    MENU_ITEM(back, SOURCE_CODE_URL, lcd_main_menu);
     END_MENU();
 }
 
