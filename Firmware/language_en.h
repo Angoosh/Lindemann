@@ -134,6 +134,7 @@
 #define MSG_LIGHTS                          "Lights"
 #define MSG_VERSION                         "Version"
 #define MSG_RECTRACT                        "Rectract"
+#define MSG_TE255                           "Heat nozzle"
 
 #ifdef DELTA_CALIBRATION_MENU
     #define MSG_DELTA_CALIBRATE             "Delta Calibration"
