@@ -645,10 +645,16 @@ static void retractio()
     menu_action_gcode(PSTR("G1 E0 F3000"));
 }
 
+static void ext_temp_255(){
+    menu_action_gcode(PSTR("M104 S255 T0"));
+    delay(2);
+}
+
 static void lcd_ext_menu()
 {
     START_MENU();
     MENU_ITEM(back, MSG_PREPARE, lcd_prepare_menu);
+    MENU_ITEM(function, MSG_TE255, ext_temp_255);
     MENU_ITEM(function, MSG_EXTRUDE, extrudio);
     MENU_ITEM(function, MSG_RETRACT, retractio);
     END_MENU();
