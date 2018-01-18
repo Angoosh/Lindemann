@@ -146,6 +146,7 @@
 #define MSG_LIGHTS                          "Osvetleni"
 #define MSG_RECTRACT                        "Retrakce"
 #define MSG_VERSION                         "Verze"
+#define MSG_TE255                           "Nahrej trysku"
 
 #ifdef DELTA_CALIBRATION_MENU
     #define MSG_DELTA_CALIBRATE             "Delta Kalibrace"
