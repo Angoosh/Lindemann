@@ -136,7 +136,7 @@
 #define MSG_CNG_SDCARD                      "Zmenit SD kartu"
 #define MSG_ZPROBE_OUT                      "Sonda Z mimo bed"
 #define MSG_POSITION_UNKNOWN                "Domu X/Y pred Z"
-#define MSG_ZPROBE_ZOFFSET                  "Z ofset"
+#define MSG_ZPROBE_ZOFFSET                  "Odsazeni Z"
 #define MSG_BABYSTEP_X                      "Babystep X"
 #define MSG_BABYSTEP_Y                      "Babystep Y"
 #define MSG_BABYSTEP_Z                      "Babystep Z"
